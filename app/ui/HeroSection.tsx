@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ConsoleBackground from "./ConsoleBackground"; // Assuming ConsoleBackground is in the same directory or accessible path.
 
+import Image from 'next/image';
 interface HeroSectionProps {
   setPage: (page: string) => void;
 }
@@ -39,10 +40,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setPage }) => {
       id="home"
       className="min-h-screen flex flex-col justify-center items-start text-white relative px-4 sm:px-8 font-mono"
     >
-      {/* <ConsoleBackground /> */}
       <div className="z-10 p-4 max-w-4xl">
         {showPrompt && (
           <div>
+            <div className="flex justify-center md:justify-start mb-8"><Image src="/foto.png" alt="Foto de Perfil" width={200} height={200} className="rounded-full border-4 border-green-500"/></div>
             <p className="text-green-400 text-lg mb-2">
               <span className="text-cyan-400">user@matheusbiasi</span>:
               <span className="text-white">~</span>$ ./boas-vindas.sh
