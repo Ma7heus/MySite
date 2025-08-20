@@ -1,4 +1,3 @@
-import NavBar from "./ui/nav-bar";
 import "./ui/global.css";
 import React from "react";
 import Head from "./head";
@@ -10,7 +9,6 @@ export default function RootLayout({ children }) {
       <Head />
       <body>
         <div>
-        <NavBar />
         <GlobalContextProvider>{children}</GlobalContextProvider>
         </div>
       </body>
